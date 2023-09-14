@@ -1,1 +1,18 @@
-<p>servers works!</p>
+<button class="btn btn-primary" (click)="onclick()">add card</button>
+<!-- <input class="form-control" type="text" (input)="oninput($event)" /> -->
+<input class="form-control" type="text" [(ngModel)]="serverName" />
+
+<!-- <p>{{ allowNewServer }}</p> -->
+<!-- <p>{{ serverStatus }}</p> -->
+<p [ngStyle]="{ backgroundColor: getcolor() }">
+  {{ serverName }} whith id {{ serverStatus }}
+</p>
+<p
+  [ngClass]="{
+    online: serverStatus === 'online',
+    offline: serverStatus === 'offline'
+  }"
+  *ngFor="let server of servers"
+>
+  {{ serverName }} whith id {{ serverStatus }}
+</p>

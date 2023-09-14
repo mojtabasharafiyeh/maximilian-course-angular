@@ -1,0 +1,9 @@
+<button class="btn btn-primary" (click)="onclick()">dispaly details</button>
+<!-- <p *ngIf="status">any content</p> -->
+<p
+  *ngFor="let x of log"
+  [ngStyle]="{ backgroundColor: x >= 5 ? 'blue' : 'black' }"
+  [ngClass]="{ test: x >= 5 ? true : '' }"
+>
+  {{ x }}
+</p>
